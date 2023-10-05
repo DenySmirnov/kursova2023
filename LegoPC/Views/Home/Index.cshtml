@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Магазин LegoPC</title>
+</head>
+<body>
+    <div>
+        <h3>Розпродаж книг</h3>
+        <table>
+            <tr>
+                <td><p>Назва</p></td>
+                <td><p>Тип</p></td>
+                <td><p>Цiна</p></td>
+                <td></td>
+            </tr>
+            @foreach (var b in ViewBag.Accessories)
+            {
+                <tr>
+                    <td><p>@b.Name</p></td>
+                    <td><p>@b.Type</p></td>
+                    <td><p>@b.Price</p></td>
+                    <td><p><a href="/Home/Buy/@b.Id">Купити</a></p></td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
